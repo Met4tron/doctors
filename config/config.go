@@ -7,7 +7,8 @@ import (
 )
 
 type Config struct {
-	ApiConfig
+	ApiConfig      ApiConfig
+	DatabaseConfig DatabaseConfig
 }
 
 func LoadConfig() *Config {
@@ -16,6 +17,7 @@ func LoadConfig() *Config {
 	}
 
 	return &Config{
-		ApiConfig: LoadApiConfig(),
+		ApiConfig:      LoadApiConfig(),
+		DatabaseConfig: LoadDatabaseConfig(),
 	}
 }
