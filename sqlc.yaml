@@ -1,0 +1,9 @@
+version: "2"
+sql:
+  - engine: "postgresql"
+    queries: "./pkg/db/query.sql"
+    schema: "./pkg/db/schema.sql"
+    gen:
+      go:
+        package: "doctors"
+        out: "./pkg/db"
